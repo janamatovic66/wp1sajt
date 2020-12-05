@@ -35,6 +35,13 @@ $(document).ready(function(){
 
     }
 
+    else{
+         uslugeIndex()
+        vestiIndex()
+
+        $("#indexFormaDugme").click(FormaProvera)
+    }
+
     function navigacija(){
 
         let navText = [
@@ -510,7 +517,7 @@ $(document).ready(function(){
         }
 
         if(marker == true){
-            alert("Podaci su ispravno popunjeni i poslati!")
+            alert("Prijavljeni ste na nas newsletter!")
             email.val('')
         }
     }
