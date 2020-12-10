@@ -12,7 +12,9 @@ $(document).ready(function(){
 
         uslugeIndex()
         vestiIndex()
+        popuniDd()
 
+        $(".white").hide()
         $("#indexFormaDugme").click(FormaProvera)
            
     }
@@ -30,7 +32,10 @@ $(document).ready(function(){
     }
 
     if(page.indexOf('contact.html') != -1){
-            
+        
+        popuniDd()
+
+        $(".white").hide()
         $("#contactFormaDugme").click(FormaProvera)    
 
     }
@@ -196,17 +201,37 @@ $(document).ready(function(){
         vesti.innerHTML = html
     }
 
+    function popuniDd(){
+
+        let polPodaci = ['Choose Gender', 'Female', 'Male']
+
+        let polDd = $("#pol")
+
+        let html = ''
+
+        for (let i = 0; i < polPodaci.length; i++) {
+            
+            html += `<option value="${i}">${polPodaci[i]}</option>`
+                        
+        }
+
+        polDd.html(html)
+    }
+
     function FormaProvera(){
 
         let markerName = false
         let markerEmail = false
         let markerPhone = false
         let markerMessage = false
+        let markerPolDd = false
 
         let name = $("#name")
         let email = $("#email")
         let phone = $("#phone")
         let message = $("#message")
+        let polDd = $("#pol")
+        let polDdSelektovan = $("#pol").prop('selectedIndex')
         
         let nameReg = /^[A-zšđčćž]{3,}$/
         let emailReg = /^\w([\.-]?\w+\d*)*@\w+\.\w{2,6}$/
@@ -272,6 +297,17 @@ $(document).ready(function(){
             phone.attr('placeholder', 'Phone number')
         }
 
+        if(polDdSelektovan == 0){
+           polDd.css({
+            'border' : '4px solid crimson'
+            })
+        }else{
+            polDd.css({
+                'border': 'none'
+            })
+            markerPolDd = true
+        }
+
         if(message.val() == ''){
             message.css({
                 'border' : '4px solid crimson'
@@ -286,12 +322,9 @@ $(document).ready(function(){
             message.attr('placeholder', 'Message')
         }
 
-        if(markerName && markerEmail && markerPhone && markerMessage){
-            alert("Podaci su ispravno popunjeni i poslati!")
-            name.val('')
-            email.val('')
-            phone.val('')
-            message.val('')
+        if(markerName && markerEmail && markerPhone && markerPolDd && markerMessage){
+            $(".white").fadeIn()
+            
         }
     }
 
