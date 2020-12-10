@@ -2384,3 +2384,18 @@ section .white_fonts > container > row > .col-md-6{
 	background: #fff;
 }
 
+.white{
+	color: #fff !important;
+}
+
+#pol{
+	width: 100%;
+    background: #0e0606;
+    min-height: 65px;
+    border: none;
+    margin: 15px 0;
+    color: #fff;
+    padding: 0 25px;
+    font-size: 17px;
+    font-weight: 300;
+}
