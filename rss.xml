@@ -1,0 +1,21 @@
+rss version="2.0">
+<channel>
+<title>Exchange currency- O nama</title>
+<link>GITHUB_LINK/about.html</link>
+<description>Exchange currency - Saznajte vise o nama </description>
+<item>
+<title>Ko je autor?</title>
+<link>GITHUB_LINK/o-autoru</link>
+<description>
+Saznajte vise o autoru.
+</description>
+</item>
+<item>
+<title>Novosti</title>
+<link>GITHUB_LINK/news.html</link>
+<description>
+Pogledajte naše novosti.
+</description>
+</item>
+</channel>
+</rss>
