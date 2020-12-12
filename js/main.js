@@ -87,7 +87,9 @@ $(document).ready(function(){
             "> News",
             "> Contact",
             "> O Autoru",
-            "> Dokumentacija"
+            "> Dokumentacija",
+            "> RSS",
+            "> Sitemap"
         ]
 
         let navHref = [
@@ -98,7 +100,9 @@ $(document).ready(function(){
             "news.html",
             "contact.html",
             "autor.html",
-            "dokumentacija.pdf"
+            "dokumentacija.pdf",
+            "rss.xml",
+            "sitemap.xml"
         ]
 
         let nav = document.querySelector(".menu_footer")
